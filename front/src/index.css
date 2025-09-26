@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-pixelate: "Audiowide", sans-serif;
+
+  --color-background-white: #fefefe;
+  --color-text-white: #ededed;
+
+  --color-background-black: #121212;
+  --color-text-black: #232323;
+
+  --color-primary-hover: #74CBED;
+  --color-primary-activate: #4683E5;
+
+  --color-secondary-hover: #3B82F6;
+  --color-secondary-activate: #1E3A8A;
+
+  --color-glow: #6366f1;
+}
+
+@layer components {
+  .background-change { @apply bg-background-white dark:bg-background-black; }
+  .text-change { @apply text-text-black dark:text-text-white; }
+
+  .social-icon-link { @apply hover:text-secondary-hover active:text-secondary-activate dark:hover:text-primary-hover dark:active:text-primary-activate transition-colors duration-200; }
+  .nav-link { @apply hover:text-secondary-hover active:text-secondary-activate dark:hover:text-primary-hover dark:active:text-primary-activate font-pixelate font-bold; }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}

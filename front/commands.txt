@@ -1,0 +1,4 @@
+1. yarn create vite front --template react-ts
+2. cd front
+3. yarn
+4. yarn add @tailwindcss/vite postcss autoprefixer
