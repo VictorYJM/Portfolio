@@ -1,14 +1,14 @@
 import { TypeAnimation } from "react-type-animation";
 
 const Profile = () => {
-    return(
+    return (
         <section id="profile" className="min-h-screen flex items-center justify-center pt-20 background-change">
             <div className="text-center">
                 {/* Title */}
                 <h1 className="text-5xl md:text-6xl font-bold text-change font-pixelate">
                     Hi 👋, I am
                     <br className="md:hidden" />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-activate to-secondary-hover dark:bg-gradient-to-r dark:from-primary-activate dark:to-primary-hover">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-sub to-secondary-main dark:bg-gradient-to-r dark:from-primary-sub dark:to-primary-main">
                         {" "}Victor Yuji Mimura
                     </span>
                 </h1>

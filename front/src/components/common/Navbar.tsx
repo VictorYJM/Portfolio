@@ -3,7 +3,7 @@ import { FaWhatsapp, FaLinkedin, FaGithub, FaSun, FaMoon } from "react-icons/fa"
 
 const Navbar = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
-        if (typeof window !== undefined && (localStorage.theme == "dark" || (!("theme" in localStorage) && 
+        if (typeof window !== undefined && (localStorage.theme == "dark" || (!("theme" in localStorage) &&
             window.matchMedia("(prefers-color-scheme: dark)").matches))) { return true; }
         return false;
     });
@@ -24,14 +24,14 @@ const Navbar = () => {
         setIsDarkMode(prevState => !prevState);
     };
 
-    return(
+    return (
         <nav className="fixed top-0 left-0 w-full background-change text-change shadow-md z-50">
             <div className="container mx-auto px-1.5 py-2.5 flex justify-between items-center">
                 {/* Left Navbar */}
                 <div className="flex items-center space-x-4">
-                    <a href="" target="_blank" className="social-icon-link"><FaWhatsapp size={36}/></a>
-                    <a href="" target="_blank" className="social-icon-link"><FaLinkedin size={36}/></a>
-                    <a href="" target="_blank" className="social-icon-link"><FaGithub size={36}/></a>                    
+                    <a href="https://wa.me/5519995209278" target="_blank" className="social-icon-link"><FaWhatsapp size={36} /></a>
+                    <a href="https://www.linkedin.com/in/victor-mimura-44a654384/" target="_blank" className="social-icon-link"><FaLinkedin size={36} /></a>
+                    <a href="https://github.com/VictorYJM" target="_blank" className="social-icon-link"><FaGithub size={36} /></a>
                 </div>
 
                 {/* Middle Navbar */}
@@ -44,7 +44,7 @@ const Navbar = () => {
                 {/* Right Navbar */}
                 <div className="flex items-center">
                     <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800">
-                        {isDarkMode ? <FaSun size={36}/> : <FaMoon size={36}/>}
+                        {isDarkMode ? <FaSun size={36} /> : <FaMoon size={36} />}
                     </button>
                 </div>
             </div>

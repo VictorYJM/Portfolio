@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -6,17 +6,31 @@
 @theme {
   --font-pixelate: "Audiowide", sans-serif;
 
-  --color-background-white: #fefefe;
-  --color-text-white: #ededed;
+  --color-background-white: #cecece;
+  --color-text-white: #bdbdbd;
 
   --color-background-black: #121212;
   --color-text-black: #232323;
 
-  --color-primary-hover: #74CBED;
-  --color-primary-activate: #4683E5;
+  /* Blue */
+  --color-primary-main: #74CBED;
+  --color-primary-sub: #4683E5;
 
-  --color-secondary-hover: #3B82F6;
-  --color-secondary-activate: #1E3A8A;
+  /* Blue links navbar */
+  --color-secondary-main: #3B82F6;
+  --color-secondary-sub: #1E3A8A;
+
+  /* Green */
+  --color-tertiary-main: #2DD465;
+  --color-tertiary-sub: #0F763D;
+
+  /* Red */
+  --color-quaternary-main: #EB3131;
+  --color-quaternary-sub: #8C040F;
+
+  /* Purple */
+  --color-quinary-main: #AC8AE6;
+  --color-quinary-sub: #542180;
 
   --color-glow: #6366f1;
 }
@@ -25,8 +39,18 @@
   .background-change { @apply bg-background-white dark:bg-background-black; }
   .text-change { @apply text-text-black dark:text-text-white; }
 
-  .social-icon-link { @apply hover:text-secondary-hover active:text-secondary-activate dark:hover:text-primary-hover dark:active:text-primary-activate transition-colors duration-200; }
-  .nav-link { @apply hover:text-secondary-hover active:text-secondary-activate dark:hover:text-primary-hover dark:active:text-primary-activate font-pixelate font-bold; }
+  .social-icon-link { @apply hover:text-secondary-main active:text-secondary-sub dark:hover:text-primary-main dark:active:text-primary-sub transition-colors duration-200; }
+  .nav-link { @apply hover:text-secondary-main active:text-secondary-sub dark:hover:text-primary-main dark:active:text-primary-sub font-pixelate font-bold; }
+
+  .tab-button { @apply font-pixelate font-bold py-2 px-5 rounded-lg border-2 border-transparent transition-all duration-300; }
+  .tab-button:hover { @apply border-quaternary-main; }
+  .tab-button-active { @apply bg-quaternary-sub text-white; }
+
+  .tab-underline { @apply absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gray-400 dark:bg-gray-700 transition-all duration-300 ease-in-out; }
+  .tab-glow {
+    @apply absolute bottom-0 h-0.5 bg-quaternary-main rounded-full transition-all duration-300 ease-in-out;
+    box-shadow: 0 0 10px var(--color-primary-main), 0 0 20px var(--color-primary-main);
+  }
 }
 
 html {
